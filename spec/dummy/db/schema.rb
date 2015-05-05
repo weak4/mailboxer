@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20131206080416) do
     t.datetime "created_at",                              :null => false
     t.boolean  "global",               :default => false
     t.datetime "expires"
+    t.string   "attachments",          default: [],                 array: true
   end
 
   add_index "mailboxer_notifications", ["conversation_id"], :name => "index_mailboxer_notifications_on_conversation_id"
